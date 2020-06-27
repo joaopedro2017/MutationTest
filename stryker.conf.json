@@ -2,8 +2,7 @@
   "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
   "mutator": "javascript",
   "mutate": [
-    "./src/*.js",
-    "./test/*.test.js"
+    "./src/*.js"
   ],
   "packageManager": "yarn",
   "reporters": [
