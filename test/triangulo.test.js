@@ -10,10 +10,28 @@ describe('Teste Unitário de triângulo', () => {
     let resultado = triangulo(arestas)
     expect(resultado).toEqual('Valor de a é inválido!')
   })
+  test('Valor 0 em a', () => {
+    let arestas = {
+      a: 0,
+      b: 21,
+      c: 14
+    }
+    let resultado = triangulo(arestas)
+    expect(resultado).toEqual('Valor de a é inválido!')
+  })
   test('Valor inválido em b', () => {
     let arestas = {
       a: 2,
       b: 'Teste',
+      c: 5
+    }
+    let resultado = triangulo(arestas)
+    expect(resultado).toEqual('Valor de b é inválido!')
+  })
+  test('Valor 0 em b', () => {
+    let arestas = {
+      a: 2,
+      b: 0,
       c: 5
     }
     let resultado = triangulo(arestas)
@@ -24,6 +42,15 @@ describe('Teste Unitário de triângulo', () => {
       a: 10,
       b: 15,
       c: undefined
+    }
+    let resultado = triangulo(arestas)
+    expect(resultado).toEqual('Valor de c é inválido!')
+  })
+  test('Valor 0 em c', () => {
+    let arestas = {
+      a: 10,
+      b: 15,
+      c: 0
     }
     let resultado = triangulo(arestas)
     expect(resultado).toEqual('Valor de c é inválido!')
