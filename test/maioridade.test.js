@@ -1,10 +1,10 @@
-const { maioridade } = require('../src/index.js')
+const { maioridade } = require('../src/maioridade.js')
 
 describe('Teste Unitário de maioridade', () => {    
   test('Idade superior a 18 anos', () => {
     let usuario = {
       nome: "Teste",
-      idade: "20"
+      idade: 20
     }
     let resultado = maioridade(usuario)
     expect(resultado).toEqual(true)
@@ -12,7 +12,7 @@ describe('Teste Unitário de maioridade', () => {
   test('Idade igual a 18 anos', () => {
     let usuario = {
       nome: "Teste",
-      idade: "18"
+      idade: 18
     }
     let resultado = maioridade(usuario)
     expect(resultado).toEqual(true)
@@ -20,7 +20,7 @@ describe('Teste Unitário de maioridade', () => {
   test('Idade inferior a 18 anos', () => {
     let usuario = {
       nome: "Teste",
-      idade: "9"
+      idade: 9
     }
     let resultado = maioridade(usuario)
     expect(resultado).toEqual(false)
