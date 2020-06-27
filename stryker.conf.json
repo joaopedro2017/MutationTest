@@ -1,0 +1,18 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutator": "javascript",
+  "mutate": [
+    "./src/*.js",
+    "./test/*.test.js"
+  ],
+  "packageManager": "yarn",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress",
+    "dashboard"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off"
+}
