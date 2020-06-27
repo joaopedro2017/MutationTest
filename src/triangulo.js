@@ -1,9 +1,12 @@
 function triangulo(arestas) {
-  if (!Number.isInteger(arestas.a) || !Number.isInteger(arestas.b) || !Number.isInteger(arestas.c)) {
-    return "Valores inválidos!";
+  if (isNaN(arestas.a) || arestas.a <= 0) {
+    return "Valor de a é inválido!";
   }
-  if (arestas.a <= 0 || arestas.b <= 0 || arestas.c <= 0) {
-    return "Valores inválidos!";
+  if (isNaN(arestas.b) || arestas.b <= 0) {
+    return "Valor de b é inválido!";
+  }
+  if (isNaN(arestas.c) || arestas.c <= 0) {
+    return "Valor de c é inválido!";
   }
   if(arestas.a === arestas.b && arestas.b === arestas.c) {
     return "Triângulo equilátero";

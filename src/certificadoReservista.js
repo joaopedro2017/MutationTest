@@ -5,8 +5,8 @@ function certificadoReservista(usuario) {
   if(usuario.sexo !== 'M' && usuario.sexo !== 'F') {
     return "Sexo inválido!";
   }
-  if(usuario.idade >= 18 && usuario.sexo === 'M') {
-    return true;
+  if(usuario.sexo === 'M') {
+    return usuario.idade >= 18;
   }
   return false;
 }
