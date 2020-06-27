@@ -23,6 +23,6 @@ describe('Teste Unitário de maioridade', () => {
       idade: "9"
     }
     let resultado = maioridade(usuario)
-    expect(resultado).toEqual(true)
+    expect(resultado).toEqual(false)
   })
 })
