@@ -4,7 +4,7 @@ describe('Teste Unitário de cálculo de frete', () => {
   test('Quantidade inválida', () => {
     let carrinho = {
       quantidade: undefined,
-      valor: 60
+      valorUnitario: 60
     }
     let resultado = calculoFrete(carrinho);
     expect(resultado).toEqual('Quantidade é inválida!');
